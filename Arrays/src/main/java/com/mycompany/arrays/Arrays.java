@@ -4,6 +4,8 @@
 
 package com.mycompany.arrays;
 
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -39,6 +41,25 @@ public class Arrays {
          
         String string ="   fly me   to   the moon  ";
         System.out.println(Solution.lengthOfLastWord(string));
+        
+        
+        List<String> words = new ArrayList();
+        words.add("ball");
+        words.add("area");
+        words.add("read");
+        words.add("lady");
+        
+       
+             
+        System.out.println("+++++++++++++++++++++++++++++++++\n");    
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                System.out.println(words.get(j).charAt(i));
+            }
+        }
+        System.out.println("+++++++++++++++++++++++++++++++++\n");    
+        boolean validWordSquare = Solution.validWordSquare(words);
+        System.out.println(validWordSquare);
 
     }
     

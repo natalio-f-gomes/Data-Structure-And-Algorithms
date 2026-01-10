@@ -6,8 +6,10 @@ package com.mycompany.arrays;
 
 import java.util.TreeSet;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.List;
 import java.util.HashSet;
+import java.util.HashMap;
+import java.util.ArrayList;
 
 /**
  *
@@ -111,6 +113,45 @@ public class Solution {
     
      public static int[] twoSum(int[] nums, int target) {
         
+       int[] output = new int[2];
+        for(int i=0;i< nums.length; i++){
+            for(int j=0;j < nums.length; j++){
+                if((nums[i] + nums[j] == target) && (i!=j)){
+                    output[0] = j;
+                    output[1] = i;
+                }
+            }
+        }
+        return output;
+    
     }
+     
+    public static boolean validWordSquare(List<String> words) {
+        if(words.isEmpty()){return true;}
+        ArrayList<String> verticalWords = new ArrayList<>();
+        int biggestWord = 0;
+        for(String word: words){
+            //loop through each word and get the length of the longest word
+            biggestWord = Math.max(biggestWord, word.length());
+        }
+        //loop in the range of the bigest word in the list
+        for(int i=0;i<biggestWord; i++){
+           StringBuilder sb = new StringBuilder();
+            //loop through the current word
+            for(String word: words){
+                if(i < word.length()){
+                    sb.append(word.charAt(i));
+                }
+            }
+            verticalWords.add(sb.toString()); 
+        }
+        for(int i=0;i<words.size();i++){
+            if(! words.get(i).equals(verticalWords.get(i))){
+                return false;
+            }
+        }
+       return true;
+    }
+      
 }
 
