@@ -23,12 +23,21 @@ public class Arrays {
            System.out.print(num + " ");
        }
        System.out.println("");
-       String s="()[]{}";
+       String s="({[{({[[})}]})";
         
-       boolean isValid = Solution.isValid("s");
-        System.out.println(isValid);
+       
+        System.out.println("String score");
+        System.out.println(Solution.scoreOfString("code"));
 
+        int[] numbers = {1, 2, 3, 3};
+        System.out.println(Solution.hasDuplicate(numbers));
+        
+        String st1 = "racecar";
+        String st2 = "carrace";
+        System.out.println(Solution.isAnagram(st1, st2));
     }
+    
+  
     
     
     
