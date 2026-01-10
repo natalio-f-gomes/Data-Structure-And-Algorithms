@@ -6,7 +6,7 @@ package com.mycompany.arrays;
 
 import java.util.TreeSet;
 import java.util.Arrays;
-import java.util.Stack;
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -75,10 +75,8 @@ public class Solution {
             System.out.println("current: " + currentAsciiValue + " nextAsciiValue"+ "pair: " + pair);
            //System.out.println(pair);
            score += pair;
-           
        }
-       return score;
-          
+       return score;   
     }
      
       public static boolean hasDuplicate(int[] nums) {
@@ -93,7 +91,6 @@ public class Solution {
         if(s.length() == 0 && t.length() == 0 ){return true;}
         if(s.length() != t.length()){return false;}
         
-       
         char[] sChar = s.toCharArray();
         char[] tChar = t.toCharArray();
         Arrays.sort(sChar);
@@ -104,22 +101,12 @@ public class Solution {
                 return false;
             }
         }
-
         return true;
-
     }
-    
+     
+    public static int lengthOfLastWord(String s) {
+        String[] words = s.split(" ");
+        return words[words.length-1].length();
+    } 
 }
-    
-/*
-
-Input: s = "code"
-
-Output: 24
-c
-o
-d
-e
-
-*/
 

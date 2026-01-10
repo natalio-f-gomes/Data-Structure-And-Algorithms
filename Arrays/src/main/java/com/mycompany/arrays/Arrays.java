@@ -35,7 +35,13 @@ public class Arrays {
         String st1 = "racecar";
         String st2 = "carrace";
         System.out.println(Solution.isAnagram(st1, st2));
+        
+         
+        String string ="   fly me   to   the moon  ";
+        System.out.println(Solution.lengthOfLastWord(string));
+
     }
+    
     
   
     
