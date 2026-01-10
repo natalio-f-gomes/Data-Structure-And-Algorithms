@@ -48,16 +48,8 @@ public class Arrays {
         words.add("area");
         words.add("read");
         words.add("lady");
-        
-       
-             
-        System.out.println("+++++++++++++++++++++++++++++++++\n");    
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                System.out.println(words.get(j).charAt(i));
-            }
-        }
-        System.out.println("+++++++++++++++++++++++++++++++++\n");    
+
+          
         boolean validWordSquare = Solution.validWordSquare(words);
         System.out.println(validWordSquare);
 

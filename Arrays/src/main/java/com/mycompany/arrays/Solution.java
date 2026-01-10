@@ -136,14 +136,14 @@ public class Solution {
         }
         //loop in the range of the bigest word in the list
         for(int i=0;i<biggestWord; i++){
-           StringBuilder sb = new StringBuilder();
-            //loop through the current word
+           StringBuilder currentWord = new StringBuilder(); 
+            //loop through the list
             for(String word: words){
                 if(i < word.length()){
-                    sb.append(word.charAt(i));
+                    currentWord.append(word.charAt(i));
                 }
             }
-            verticalWords.add(sb.toString()); 
+            verticalWords.add(currentWord.toString()); 
         }
         for(int i=0;i<words.size();i++){
             if(! words.get(i).equals(verticalWords.get(i))){
