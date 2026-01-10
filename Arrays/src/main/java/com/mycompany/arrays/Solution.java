@@ -108,5 +108,9 @@ public class Solution {
         String[] words = s.split(" ");
         return words[words.length-1].length();
     } 
+    
+     public static int[] twoSum(int[] nums, int target) {
+        
+    }
 }
 
