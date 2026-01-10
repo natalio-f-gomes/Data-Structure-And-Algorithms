@@ -152,6 +152,31 @@ public class Solution {
         }
        return true;
     }
+    
+    public static int countSeniors(String[] details) {
+        /*
+        The first ten characters consist of the phone number of passengers.
+        The next character denotes the gender of the person.
+        The following two characters are used to indicate the age of the person.
+        The last two characters determine the seat allotted to that person.
+        */
+        int number = 0;
+        
+      
+        for(String passenger: details){
+            StringBuilder age = new StringBuilder();
+            for(int i=11;i<=12;i++){
+                age.append(passenger.charAt(i));
+            }
+            if(Integer.parseInt(age.toString()) > 60){
+                number++;
+            }
+            System.out.println(age);
+            
+
+        }
+        return number;
+    }
       
 }
 

@@ -52,6 +52,11 @@ public class Arrays {
           
         boolean validWordSquare = Solution.validWordSquare(words);
         System.out.println(validWordSquare);
+        
+        System.out.println("=====================");
+        String[] people = {"7868190130M7522","5303914400F9211","9273338290F4010"};
+        int r = Solution.countSeniors(people);
+        System.out.println(r);
 
     }
     
