@@ -236,6 +236,56 @@ public class Solution {
         }
         return total;
     }
+    
+    public static boolean isSubsequence(String s, String t) {
+        StringBuilder word = new StringBuilder();
+        int outer;
+        int inner;
+        for(outer =0;outer < s.length(); outer++){
+            for(inner =0; inner < t.length(); inner++){
+                if(s.charAt(outer) == t.charAt(inner)){
+                    word.append(t.charAt(inner));
+                    break;
+                }
+          
+        }
+            
+        }
+        System.out.println(word);
+        
+        return word.toString().equals(s);
+    }
+     public static int majorityElement(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap();
+         System.out.println("map " + map);
+        for(int i=0;i<nums.length;i++){
+            try{
+            map.put(nums[i], map.get(nums[i])+1);
+             System.out.println("try map"+ map);}
+           
+            catch(Exception e){
+                map.put(nums[i], 1);
+                 System.out.println("catch"+ map);
+            }
+        }
+        int mapKey = 0;
+        int mapValue =0;
+        for(int key: map.keySet()){
+            System.out.println("mapValue " + mapValue);
+            System.out.println("mapKey "+ map.get(key));
+            System.out.println("map.get(key)> mapValue "+ (map.get(key)> mapValue));
+            if(map.get(key)> mapValue){
+                mapKey = key;
+                mapValue = map.get(key);
+            }
+        }
+        System.out.println("mapValue " + mapValue);
+        System.out.println("map.get(mapKey) " + map.get(mapKey));
+        
+        return mapKey;
+    }
+    
+    
       
 }
 

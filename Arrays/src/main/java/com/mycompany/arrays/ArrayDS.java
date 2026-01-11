@@ -5,13 +5,14 @@
 package com.mycompany.arrays;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List; 
+import java.util.HashMap;
 
 /**
  *
  * @author nataliogomes
  */
-public class Arrays {
+public class ArrayDS {
 
     public static void main(String[] args) {
        int[] nums = {1,1,2,3,4};
@@ -65,6 +66,23 @@ public class Arrays {
         System.out.println("===================\n");
         int[] arr = {1,1,0,1,1,1};
         System.out.println(Solution.findMaxConsecutiveOnes(arr));
+        
+        System.out.println("===================\n");
+        String one = "node";
+        String two = "neetcode";
+        boolean res =  Solution.isSubsequence(one,two);
+        System.out.println(res);
+        
+        System.out.println("===================\n");
+        
+        
+        
+        int[] q = {3,3,4};
+        System.out.println(Solution.majorityElement(q));
+        
+        
+        
+
         
         
 
