@@ -210,6 +210,32 @@ public class Solution {
         return uniqueEmails.size();
 
     }
+     
+    public static int findMaxConsecutiveOnes(int[] nums) {
+        if (nums.length ==0) {return 0;}
+        int total = 0;
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<nums.length;i++){
+            
+            System.out.println("nums[i] "+ nums[i]);
+            System.out.println("nums[i]==1? : "+ (nums[i]==1));
+            System.out.println("sb length "+sb.length());
+            System.out.println("index: " + i);
+            if(nums[i] == 1){
+                sb.append("1");
+                System.out.println("sb "+ sb);
+            }else{
+                System.out.println("nums[i] "+nums[i]);
+                
+                sb.setLength(0);
+            }
+            total = Math.max(total, sb.length());
+            System.out.println("sb "+ sb);
+            
+            
+        }
+        return total;
+    }
       
 }
 

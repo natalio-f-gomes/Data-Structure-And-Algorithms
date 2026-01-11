@@ -62,6 +62,11 @@ public class Arrays {
         String[] emails = {"test.email+alex@neetcode.com","test.e.mail+bob.cathy@neetcode.com","testemail+david@nee.tcode.com"};
         System.out.println(Solution.numUniqueEmails(emails));
         
+        System.out.println("===================\n");
+        int[] arr = {1,1,0,1,1,1};
+        System.out.println(Solution.findMaxConsecutiveOnes(arr));
+        
+        
 
     }
     
