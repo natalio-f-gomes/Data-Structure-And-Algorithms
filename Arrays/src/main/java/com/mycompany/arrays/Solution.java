@@ -177,6 +177,39 @@ public class Solution {
         }
         return number;
     }
+    
+     public static int numUniqueEmails(String[] emails) {
+      
+        HashSet uniqueEmails = new HashSet();
+        for(int i=0;i<emails.length;i++){
+            //looping through the list
+            String[] emailsSperated = emails[i].split("@");
+            String domain = emailsSperated[1];
+            String username = emailsSperated[0];
+            StringBuilder validEmail = new StringBuilder();
+            for(int letterIndex=0; letterIndex< username.length(); letterIndex++){
+                //looping through the individual word
+                username = username.replace(".", "");
+                if(username.charAt(letterIndex) != '+'){
+                    validEmail.append(username.charAt(letterIndex));
+                }else{ break;}
+                
+            }
+            validEmail.append("@");
+            validEmail.append(domain);
+            
+            uniqueEmails.add(validEmail.toString());
+            
+            System.out.println("Unique emails: " + uniqueEmails);
+            System.out.println("username "+ username);
+            System.out.println("SB validemail "+ validEmail);
+            System.out.println("domain "+domain);
+            
+        }
+        
+        return uniqueEmails.size();
+
+    }
       
 }
 

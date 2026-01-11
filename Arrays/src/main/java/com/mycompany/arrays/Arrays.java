@@ -57,6 +57,11 @@ public class Arrays {
         String[] people = {"7868190130M7522","5303914400F9211","9273338290F4010"};
         int r = Solution.countSeniors(people);
         System.out.println(r);
+        System.out.println("=====================");
+        
+        String[] emails = {"test.email+alex@neetcode.com","test.e.mail+bob.cathy@neetcode.com","testemail+david@nee.tcode.com"};
+        System.out.println(Solution.numUniqueEmails(emails));
+        
 
     }
     
