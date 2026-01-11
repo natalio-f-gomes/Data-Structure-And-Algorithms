@@ -19,7 +19,7 @@ public class ArrayDS {
        
        int deduplicates = Solution.removeDuplicates(nums);
        
-       int n[] = Solution.removeElement(nums, 1);
+       int[] n = Solution.removeElement(nums, 1);
        
        int[] result = Solution.getConcatenation(nums);
         for(int num: result){
@@ -74,17 +74,11 @@ public class ArrayDS {
         System.out.println(res);
         
         System.out.println("===================\n");
-        
-        
-        
         int[] q = {3,3,4};
         System.out.println(Solution.majorityElement(q));
         
         
-        
-
-        
-        
+   
 
     }
     
