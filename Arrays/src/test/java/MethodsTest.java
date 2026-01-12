@@ -332,4 +332,6 @@ public class MethodsTest {
         int result = Solution.maxDifference(s);
         assertEquals(0, result);
     }
+    
+    
 }
