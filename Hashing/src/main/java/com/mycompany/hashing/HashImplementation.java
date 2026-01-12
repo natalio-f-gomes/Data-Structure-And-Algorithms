@@ -29,9 +29,7 @@ public class HashImplementation {
             System.out.println("Size: "+size);
             this.array = new HashMap[size];
             
-            for(int i=0;i< array.length; i++){
-                //int r = array[i] % size;
-            }
+            //implement the for loop
         }
         HashMap<String, Integer> map = new HashMap();
         map.put(key, value);
